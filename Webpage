@@ -1,10 +1,155 @@
 <!doctype html>
-<html>
-	<head>
-    	<title>Duy Nguyen</title>
-    </head>
-    <body>
-    	<h1>My header</h1>
-        <p>My paragraph</p>
-    </body>
-</html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duy Nguyen · Portfolio</title>
+  <meta name="description" content="Duy Nguyen — UCSD Computer Engineering student focused on ML, backend systems, and data-driven research." />
+  <meta property="og:title" content="Duy Nguyen · Portfolio" />
+  <meta property="og:description" content="UCSD Computer Engineering student focused on ML, backend systems, and data-driven research." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0f172a; --muted:#475569; --card:#f8fafc; --border:#e2e8f0; --link:#1d4ed8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0b0f1a; --fg:#e5e7eb; --muted:#94a3b8; --card:#0f172a; --border:#1f2937; --link:#60a5fa; }
+    }
+    html,body{height:100%}
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--fg); line-height:1.6 }
+    .container{max-width:960px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);backdrop-filter:saturate(180%) blur(6px);z-index:10}
+    .id{display:flex;flex-direction:column}
+    .id .name{font-size:clamp(20px,3vw,28px);font-weight:600}
+    .id .tag{font-size:14px;color:var(--muted)}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:999px;text-decoration:none;color:var(--fg);background:transparent}
+    .btn.primary{background:var(--fg);color:var(--bg);border-color:transparent}
+    .btn:hover{transform:translateY(-1px)}
+    main{display:grid;grid-template-columns:1fr;gap:28px;padding-top:12px}
+    section{border:1px solid var(--border);border-radius:18px;background:var(--card);padding:20px}
+    section h2{margin:0 0 10px;font-size:18px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:12px}
+    .grid.two{grid-template-columns:1fr 1fr}
+    @media (max-width:720px){.grid.two{grid-template-columns:1fr}}
+    .item{padding:14px;border:1px solid var(--border);border-radius:14px;background:var(--bg)}
+    .item h3{margin:0 0 6px;font-size:16px}
+    .meta{font-size:12px;color:var(--muted)}
+    ul.clean{padding-left:18px;margin:8px 0}
+    footer{border-top:1px solid var(--border);margin-top:20px;padding:20px 0;color:var(--muted);font-size:14px}
+    a{color:var(--link)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="id" aria-label="Identity">
+        <div class="name">Duy Nguyen</div>
+        <div class="tag">UC San Diego · Computer Engineering · ML & Backend</div>
+      </div>
+      <nav aria-label="Primary">
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn primary" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-h2">
+        <h2 id="about-h2">About</h2>
+        <p class="muted">Computer Engineering student at UC San Diego focusing on machine learning, backend systems, and data‑driven research. Comfortable across Python, C++, C, and Java. Interested in ML‑powered products and reliable infrastructure.</p>
+        <p style="margin-top:8px"><a href="assets/DuyNguyen_Resume_2025_final.pdf" download>Download résumé (PDF)</a></p>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-h2">
+        <h2 id="projects-h2">Selected Projects</h2>
+        <div class="grid two">
+          <article class="item" aria-labelledby="suits-h3">
+            <h3 id="suits-h3">NASA SUITS — HoloLens 2 UI</h3>
+            <div class="meta">AR · Navigation · Telemetry</div>
+            <ul class="clean">
+              <li>Designed a carousel-style interface for astronaut navigation and situational awareness.</li>
+              <li>Integrated mission data and feedback loops into AR displays.</li>
+            </ul>
+            <p class="meta">2022</p>
+          </article>
+          <article class="item" aria-labelledby="ncas-h3">
+            <h3 id="ncas-h3">NASA NCAS — Mission 2 & 3</h3>
+            <div class="meta">Robotics · Distributed Systems</div>
+            <ul class="clean">
+              <li>Aligned rover design and control logic to mission goals.</li>
+              <li>Proposed a “hivemind” coordination server for multi‑drone tasking and deconfliction.</li>
+            </ul>
+            <p class="meta">2022</p>
+          </article>
+          <article class="item" aria-labelledby="wildfire-h3">
+            <h3 id="wildfire-h3">NSF Research — Wildfire Modeling</h3>
+            <div class="meta">Python · Pandas · Regression</div>
+            <ul class="clean">
+              <li>Modeled wildfire behavior using multi‑source datasets and regression features.</li>
+              <li>Identified environmental risk patterns via data cleaning and analysis.</li>
+            </ul>
+            <p class="meta">2023</p>
+          </article>
+          <article class="item" aria-labelledby="mars-h3">
+            <h3 id="mars-h3">NSF Project — Mars Payload @ L1</h3>
+            <div class="meta">MATLAB · Orbital Mechanics</div>
+            <ul class="clean">
+              <li>Simulated transfers and payload deployment via trajectory equations.</li>
+              <li>Contributed to system documentation and parameter analysis.</li>
+            </ul>
+            <p class="meta">2023</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" aria-labelledby="exp-h2">
+        <h2 id="exp-h2">Experience</h2>
+        <div class="grid">
+          <div class="item">
+            <h3>Outlier AI — Vietnamese Language Trainer</h3>
+            <div class="meta">May 2024 – Present</div>
+            <ul class="clean">
+              <li>Labeled and validated multilingual data for LLM fine‑tuning.</li>
+              <li>Ensured linguistic accuracy and cultural context for Vietnamese datasets.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>MESA — Facilitator & Activity Officer</h3>
+            <div class="meta">2023 – 2024</div>
+            <ul class="clean">
+              <li>Led STEM workshops and tutoring; organized academic programs and events.</li>
+              <li>Volunteered at Science Days, explaining physics & engineering to middle‑school students.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-h2">
+        <h2 id="contact-h2">Contact</h2>
+        <div class="grid two">
+          <div class="item">
+            <h3>Reach out</h3>
+            <p>Email: <a href="mailto:danielnguyen520@gmail.com">danielnguyen520@gmail.com</a></p>
+            <p>Location: San Diego, CA</p>
+          </div>
+          <div class="item">
+            <h3>Links</h3>
+            <ul class="clean">
+              <li><a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub profile</a></li>
+              <li><a href="#about">Résumé (PDF)</a> — add your file in <code>assets/</code></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year
